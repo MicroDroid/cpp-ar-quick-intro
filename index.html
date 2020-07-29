@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="language" content="AR">
+
+	<meta name="theme-color" content="#010b14">
+	<link rel="shortcut icon" href="https://study-with.overcoder.dev/meta/favicon.ico">
+
+	<!-- Search Engine -->
+	<meta name="description" content="شرح عن لغة C++ بطريقة مبسطة وسهلة">
+	<!-- Schema.org for Google -->
+	<meta itemprop="name" content="مستند عن C++">
+	<meta itemprop="description" content="شرح عن لغة C++ بطريقة مبسطة وسهلة">
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="مستند عن C++">
+	<meta name="twitter:description" content="شرح عن لغة C++ بطريقة مبسطة وسهلة">
+	<meta name="twitter:site" content="@overcoder0">
+	<meta name="twitter:creator" content="@overcoder0">
+	<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+	<meta name="og:title" content="مستند عن C++">
+	<meta name="og:description" content="شرح عن لغة C++ بطريقة مبسطة وسهلة">
+	<meta name="og:image" content="https://study-with.overcoder.dev/meta/logo.png">
+	<meta name="og:locale" content="ar_AR">
+	<meta name="og:type" content="website">
+
+	<title>
+		مستند عن C++
+	</title>
+
+	<link rel="sylesheet" href="https://fonts.googleapis.com/earlyaccess/notokufiarabic.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/night-owl.min.css">
+
+	<style>
+		@page {
+			size: A4;
+			margin: 1.5cm;
+		}
+
+		body {
+			direction: rtl;
+			background: #010b14;
+			font-family: 'Noto Kufi Arabic', sans-serif;
+			font-size: 0.875rem;
+
+			padding-top: 96px;
+
+
+			counter-reset: h1;
+			counter-reset: h2;
+			counter-reset: h3;
+		}
+
+		.content {
+			max-width: 800px;
+			margin: auto;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: rgba(148, 198, 223, 1);
+		}
+
+		h1 {
+			counter-increment: h1;
+			counter-reset: h2;
+			counter-reset: h3;
+		}
+
+		h1::before {
+			content: counter(h1) '. ';
+			color: #3393c4;
+			margin-left: 0.5rem;
+			direction: rtl;
+			unicode-bidi: bidi-override;
+		}
+
+		h2 {
+			counter-increment: h2;
+			counter-reset: h3;
+		}
+
+		h2::before {
+			content: counter(h1) '. 'counter(h2) '. ';
+			color: #3393c4;
+			margin-left: 0.5rem;
+			direction: rtl;
+		}
+
+		h3 {
+			counter-increment: h3;
+		}
+
+		h3::before {
+			content: counter(h1) '. 'counter(h2) '. 'counter(h3) '. ';
+			color: #3393c4;
+			margin-left: 0.5rem;
+			direction: rtl;
+		}
+
+		p,
+		span,
+		li,
+		a,
+		td,
+		th {
+			color: rgba(107, 160, 186, 1);
+		}
+
+		a {
+			text-decoration: none;
+			border-bottom: 1px dotted rgba(148, 198, 223, 0.8);
+		}
+
+		blockquote {
+			border-right: 3px solid rgba(148, 198, 223, 0.8);
+			padding-right: 1.5rem;
+			margin-right: 0px;
+		}
+
+		code,
+		pre {
+			direction: ltr;
+			text-align: left;
+		}
+
+		code.hljs {
+			padding: 0.75rem;
+			font-size: 14px;
+		}
+
+		code:not(.hljs) {
+			color: #ecc48d;
+			unicode-bidi: bidi-override;
+		}
+
+		th {
+			text-align: right;
+		}
+
+		th,
+		td {
+			padding-left: 1.5rem;
+		}
+
+		.emoji {
+			width: 1.5em;
+			height: 1.5em;
+			vertical-align: middle;
+		}
+
+		h1 {
+			margin-top: 64px;
+		}
+
+		h2 {
+			margin-top: 48px;
+		}
+
+		h3 {
+			margin-top: 28px;
+		}
+
+		hr {
+			margin: 48px 0px;
+			border-color: #011f37;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="content"></div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/11.0.0/markdown-it.min.js" crossorigin="anonymous">
+	</script>
+	<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+	<script>
+		fetch('content.md')
+			.then(r => r.text())
+			.then(markdown => {
+				const parser = new markdownit();
+				document.querySelector('.content').innerHTML = parser.render(markdown);
+				document.querySelectorAll('pre code')
+					.forEach(hljs.highlightBlock);
+				twemoji.parse(document.body);
+			});
+	</script>
+</body>
+
+</html>
