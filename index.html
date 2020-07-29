@@ -206,6 +206,10 @@
 		}
 
 		gtag('js', new Date());
+
+		gtag('config', GA_TRACKING_CODE, {
+			page_path: window.location.pathname + window.location.hash,
+		});
 	</script>
 </body>
 
