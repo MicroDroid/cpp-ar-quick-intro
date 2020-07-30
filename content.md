@@ -540,7 +540,7 @@ while (شرط محقق) {
 ```c++
 int age = 0;
 
-while (age > 0 && age < 100) {
+while (age < 1 && age > 100) {
 	std::cout << "Please enter your age: ";
 	std::cin >> age;
 }
