@@ -232,7 +232,7 @@ std::cout << "water";
 
 سيكون الناتج كالتالي:
 
-```
+```plaintext
 drinkwater
 ```
 
@@ -248,7 +248,7 @@ std::cout << "water";
 
 سيكون الناتج كالتالي:
 
-```
+```plaintext
 drink
 water
 ```
@@ -445,7 +445,7 @@ switch (a) {
 
 لاحظ الخرج:
 
-```
+```plaintext
 i like apples
 i like oranges
 ```
@@ -472,7 +472,7 @@ switch (a) {
 
 في هذه الحالة يكون الخرج:
 
-```
+```plaintext
 i like bananas
 ```
 
