@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/earlyaccess/notokufiarabic.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/night-owl.min.css');
+
+@page {
+	size: A4;
+	margin: 1.5cm;
+}
+
+body {
+	direction: rtl;
+	background: #010b14;
+	font-family: 'Roboto', 'Noto Kufi Arabic', sans-serif;
+	font-size: 0.875rem;
+
+	padding-top: 10vh;
+
+
+	counter-reset: h1;
+	counter-reset: h2;
+	counter-reset: h3;
+}
+
+.content {
+	max-width: 800px;
+	margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: rgba(148, 198, 223, 1);
+}
+
+h1 {
+	counter-increment: h1;
+	counter-reset: h2;
+	counter-reset: h3;
+}
+
+h1::before {
+	content: counter(h1) '. ';
+	color: #3393c4;
+	margin-left: 0.5rem;
+	direction: rtl;
+	unicode-bidi: bidi-override;
+}
+
+h2 {
+	counter-increment: h2;
+	counter-reset: h3;
+}
+
+h2::before {
+	content: counter(h1) '. 'counter(h2) '. ';
+	color: #3393c4;
+	margin-left: 0.5rem;
+	direction: rtl;
+}
+
+h3 {
+	counter-increment: h3;
+}
+
+h3::before {
+	content: counter(h1) '. 'counter(h2) '. 'counter(h3) '. ';
+	color: #3393c4;
+	margin-left: 0.5rem;
+	direction: rtl;
+}
+
+p,
+span,
+li,
+a,
+td,
+th {
+	color: rgba(107, 160, 186, 1);
+}
+
+a {
+	text-decoration: none;
+	border-bottom: 1px dotted rgba(148, 198, 223, 0.8);
+}
+
+blockquote {
+	border-right: 3px solid rgba(148, 198, 223, 0.8);
+	padding-right: 1.5rem;
+	margin-right: 0px;
+}
+
+code,
+pre {
+	direction: ltr;
+	text-align: left;
+	font-family: 'Source Code Pro', monospace, 'Roboto', 'Noto Kufi Arabic', sans-serif;
+}
+
+code.hljs {
+	padding: 0.75rem 0;
+	font-size: 14px;
+}
+
+code:not(.hljs) {
+	color: #ecc48d;
+	unicode-bidi: bidi-override;
+}
+
+th {
+	text-align: right;
+}
+
+th,
+td {
+	padding-left: 1.5rem;
+}
+
+.emoji {
+	width: 1.5em;
+	height: 1.5em;
+	vertical-align: middle;
+}
+
+h1 {
+	margin-top: 64px;
+}
+
+h2 {
+	margin-top: 48px;
+}
+
+h3 {
+	margin-top: 28px;
+}
+
+hr {
+	margin: 48px 0px;
+	border-color: #011f37;
+}
+
+.hljs-ln .hljs-ln-numbers {
+	padding-left: 0.75rem;
+	padding-right: 0.25rem;
+	color: rgba(30, 67, 82, 1);
+}
+
+.hljs-ln .hljs-ln-code {
+	padding-left: 0.75rem;
+	width: 100%;
+}
