@@ -52,7 +52,10 @@
 		fetch('content.md')
 			.then(r => r.text())
 			.then(markdown => {
-				const parser = new markdownit();
+				const parser = new markdownit({
+					html: true,
+				});
+
 				document.querySelector('.content').innerHTML = parser.render(markdown);
 				document.querySelectorAll('pre code')
 					.forEach(codeBlock => {
