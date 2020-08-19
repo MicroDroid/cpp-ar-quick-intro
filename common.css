@@ -97,6 +97,7 @@ pre {
 	direction: ltr;
 	text-align: left;
 	font-family: 'Source Code Pro', monospace, 'Roboto', 'Noto Kufi Arabic', sans-serif;
+	tab-size: 4;
 }
 
 code.hljs {
